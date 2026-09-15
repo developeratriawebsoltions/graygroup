@@ -52,7 +52,7 @@ export function MobileMenu({
                   Gray Group navigation
                 </Dialog.Title>
 
-                <div className="shell flex h-20 shrink-0 items-center justify-between">
+                <div className="shell flex h-16 shrink-0 items-center justify-between">
                   <Link
                     href="/"
                     onClick={() => onOpenChange(false)}

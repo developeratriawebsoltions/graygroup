@@ -51,7 +51,7 @@ export function Header() {
             : "border-b border-transparent bg-transparent",
         )}
       >
-        <div className="shell flex h-20 items-center justify-between gap-6 lg:h-24">
+        <div className="shell flex h-16 items-center justify-between gap-3 sm:gap-6 lg:h-24">
           <Link href="/" aria-label="Gray Group — home" className="shrink-0">
             <Image
               src="/logograygorup.png"
@@ -59,7 +59,7 @@ export function Header() {
               width={280}
               height={80}
               className={cn(
-                "h-10 w-auto transition-all duration-700",
+                "h-7 w-auto sm:h-9 lg:h-10 transition-all duration-700",
                 solid ? "brightness-0" : "brightness-0 invert",
               )}
               priority
@@ -102,14 +102,14 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <Image
               src="/mgroup.webp"
               alt="M Group"
               width={280}
               height={80}
               className={cn(
-                "h-10 w-auto transition-all duration-700",
+                "hidden sm:block h-7 sm:h-9 lg:h-10 w-auto transition-all duration-700",
                 solid ? "brightness-0" : "brightness-0 invert",
               )}
             />

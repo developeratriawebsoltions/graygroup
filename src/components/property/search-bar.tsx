@@ -48,7 +48,7 @@ export function SearchBar({ className }: { className?: string }) {
       onSubmit={submit}
       className={cn("bg-charcoal p-8 sm:p-10 lg:p-12", className)}
     >
-      <div className="grid gap-x-8 gap-y-7 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid gap-x-8 gap-y-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5">
         <div>
           <FieldLabel htmlFor="search-location" className="text-ivory/40">
             Location
@@ -142,7 +142,7 @@ export function SearchBar({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-col gap-5 border-t border-white/12 pt-8 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-6 flex flex-col gap-4 border-t border-white/12 pt-5 sm:flex-row sm:items-center sm:justify-between sm:mt-10 sm:pt-8">
         <p className="max-w-sm text-xs leading-relaxed text-ivory/40">
           Nine communities across the Valley. Every listing independently
           verified before it reaches this page.

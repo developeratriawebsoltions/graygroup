@@ -103,7 +103,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative flex h-svh min-h-[36rem] items-center bg-charcoal"
+      className="relative flex h-svh min-h-[36rem] items-center bg-charcoal pb-[420px] md:pb-0"
       aria-label="Introduction"
     >
       <motion.div
@@ -210,10 +210,10 @@ export function Hero() {
         </div>
       </motion.div>
 
-      <div className="absolute inset-x-0 bottom-0 z-10 translate-y-1/2">
+      <div className="absolute inset-x-0 bottom-0 z-10 md:translate-y-1/2">
         <div className="shell">
           <div className="border border-white/15 bg-black/60 backdrop-blur-md">
-            <SearchBar className="bg-transparent p-6 lg:p-8" />
+            <SearchBar className="bg-transparent p-4 sm:p-6 lg:p-8" />
           </div>
         </div>
       </div>
