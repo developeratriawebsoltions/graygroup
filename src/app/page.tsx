@@ -29,7 +29,7 @@ export default function HomePage() {
       <BuyerSection />
       <TeamSection />
       <OfficesSection />
-      <InternationalSection />
+      {/* <InternationalSection /> */}
       <TestimonialSlider />
       <InsightsSection />
       <CTASection />

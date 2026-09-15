@@ -61,7 +61,7 @@ export function TestimonialSlider() {
 
           <div className="lg:col-span-10">
             <div
-              className="relative min-h-[13rem] sm:min-h-[12rem] lg:min-h-[13rem]"
+              className="relative min-h-[18rem] sm:min-h-[16rem] lg:min-h-[18rem]"
               aria-live="polite"
             >
               <AnimatePresence mode="wait" initial={false}>
@@ -74,7 +74,7 @@ export function TestimonialSlider() {
                   className="absolute inset-0"
                 >
                   <blockquote>
-                    <p className="text-quote max-w-4xl font-display text-charcoal">
+                    <p className="max-w-4xl font-display text-xl leading-relaxed text-charcoal md:text-2xl">
                       {active.quote}
                     </p>
                   </blockquote>
