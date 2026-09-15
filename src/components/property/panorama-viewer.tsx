@@ -319,7 +319,7 @@ export function PanoramaViewer({
   }, []);
 
   const onPointerDown = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
+    (event: React.PointerEvent<HTMLCanvasElement>) => {
       const v = view.current;
       v.dragging = true;
       v.pointerId = event.pointerId;
@@ -336,7 +336,7 @@ export function PanoramaViewer({
   );
 
   const onPointerMove = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
+    (event: React.PointerEvent<HTMLCanvasElement>) => {
       const v = view.current;
       if (!v.dragging || v.pointerId !== event.pointerId) return;
 
@@ -365,7 +365,7 @@ export function PanoramaViewer({
   );
 
   const endDrag = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
+    (event: React.PointerEvent<HTMLCanvasElement>) => {
       const v = view.current;
       if (v.pointerId !== event.pointerId) return;
       v.dragging = false;
@@ -441,7 +441,7 @@ export function PanoramaViewer({
   }, [draw, initialYaw, startLoop]);
 
   const onKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLDivElement>) => {
+    (event: React.KeyboardEvent<HTMLCanvasElement>) => {
       const handlers: Record<string, () => void> = {
         ArrowLeft: () => nudge(-1),
         ArrowRight: () => nudge(1),
