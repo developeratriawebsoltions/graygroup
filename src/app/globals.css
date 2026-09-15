@@ -184,7 +184,7 @@
 
 @utility text-hero {
   font-size: clamp(2rem, 5vw, 5rem);
-  line-height: 0.98;
+  line-height: 1.08;
   letter-spacing: -0.02em;
 }
 

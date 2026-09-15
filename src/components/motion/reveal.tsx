@@ -123,9 +123,9 @@ export function RevealLines({
   return (
     <Tag className={className}>
       {lines.map((line, i) => (
-        <span key={line} className="block overflow-hidden">
+        <span key={line} className="block overflow-hidden pb-[0.25em]">
           <motion.span
-            className={cn("block", lineClassName)}
+            className={cn("block -mb-[0.25em]", lineClassName)}
             initial={reduced ? { opacity: 0 } : { y: "108%" }}
             animate={reduced ? { opacity: 1 } : { y: "0%" }}
             transition={{

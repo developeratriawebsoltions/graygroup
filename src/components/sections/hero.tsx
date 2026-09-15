@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import { ScrollIndicator } from "@/components/common/scroll-indicator";
 import Image from "next/image";
 import { SearchBar } from "@/components/property/search-bar";
 import { RevealLines } from "@/components/motion/reveal";
@@ -103,7 +102,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative flex h-svh min-h-[36rem] items-center bg-charcoal pb-[420px] md:pb-0"
+      className="relative flex h-svh min-h-[36rem] items-center bg-charcoal pb-[300px] md:pb-0"
       aria-label="Introduction"
     >
       <motion.div
@@ -138,7 +137,7 @@ export function Hero() {
             <iframe
               ref={iframeRef}
               src={VIMEO_SRC}
-              title="Gray Group — Arizona luxury real estate"
+              title="Gray Group — Arizona  real estate"
               tabIndex={-1}
               allow="autoplay; fullscreen; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -218,21 +217,7 @@ export function Hero() {
         </div>
       </div>
 
-      <motion.div
-        className="absolute inset-x-0 bottom-[50%] hidden md:block"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-      >
-        <div className="shell pb-6">
-          <div className="flex items-end justify-between">
-            <div className="flex items-center gap-4">
-              <ScrollIndicator />
-              <span className="eyebrow text-white/45">Scroll</span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+
     </section>
   );
 }

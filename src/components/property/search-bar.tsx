@@ -46,9 +46,9 @@ export function SearchBar({ className }: { className?: string }) {
   return (
     <form
       onSubmit={submit}
-      className={cn("bg-charcoal p-8 sm:p-10 lg:p-12", className)}
+      className={cn("bg-charcoal p-4 sm:p-6 lg:p-12", className)}
     >
-      <div className="grid gap-x-8 gap-y-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid gap-x-4 gap-y-3 grid-cols-2 sm:gap-x-6 sm:gap-y-4 lg:grid-cols-5">
         <div>
           <FieldLabel htmlFor="search-location" className="text-ivory/40">
             Location
@@ -142,15 +142,15 @@ export function SearchBar({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="mt-6 flex flex-col gap-4 border-t border-white/12 pt-5 sm:flex-row sm:items-center sm:justify-between sm:mt-10 sm:pt-8">
-        <p className="max-w-sm text-xs leading-relaxed text-ivory/40">
+      <div className="mt-3 flex items-center justify-between gap-3 border-t border-white/12 pt-3 sm:mt-6 sm:pt-5">
+        <p className="hidden sm:block max-w-sm text-xs leading-relaxed text-ivory/40">
           Nine communities across the Valley. Every listing independently
           verified before it reaches this page.
         </p>
 
         <button
           type="submit"
-          className="group inline-flex h-13 items-center justify-center gap-3 bg-bronze px-9 py-4 text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-white transition-colors duration-500 hover:bg-ivory hover:text-charcoal"
+          className="group inline-flex h-10 sm:h-13 w-full sm:w-auto items-center justify-center gap-3 bg-bronze px-6 sm:px-9 text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-white transition-colors duration-500 hover:bg-ivory hover:text-charcoal"
         >
           Search Properties
           <Search

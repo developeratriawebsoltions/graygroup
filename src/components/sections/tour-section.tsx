@@ -30,7 +30,7 @@ export function TourSection() {
         <Reveal y={20} delay={0.14} className="mt-12">
           <VirtualTour
             scenes={tourScenes}
-            propertyName="Gray Group — Arizona Luxury Real Estate"
+            propertyName="Gray Group — Arizona  real estate"
           />
         </Reveal>
       </div>
