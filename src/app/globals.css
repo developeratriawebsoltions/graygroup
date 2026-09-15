@@ -1,26 +1,161 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------------------
+   Gray Group — design tokens
+   A restrained Arizona luxury palette: warm ivory grounds, charcoal type,
+   desert-sand and bronze accents, terracotta reserved for rare emphasis.
+   --------------------------------------------------------------------------- */
+
+@theme {
+  --color-charcoal: #171717;
+  --color-charcoal-800: #1f1f1f;
+  --color-charcoal-700: #2b2b2b;
+  --color-charcoal-500: #4a4a4a;
+
+  --color-ivory: #f7f4ee;
+  --color-ivory-200: #efeae0;
+  --color-ivory-300: #e3dccd;
+
+  --color-sand: #c8b89a;
+  --color-sand-100: #ded3bd;
+  --color-bronze: #9b8060;
+  --color-bronze-600: #85704f;
+  --color-terracotta: #a65d43;
+
+  --color-line: #ddd5c6;
+  --color-line-dark: #383838;
+
+  --tracking-luxe: 0.24em;
+  --tracking-wide-sm: 0.14em;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-cormorant), "Cormorant Garamond", "Playfair Display",
+    Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    font-size: 112.5%; /* 18px base instead of 16px */
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    /* Guard against any accidental horizontal overflow on small screens. */
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-bronze);
+    color: #fff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-bronze);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .page-enter {
+      animation: none;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer components {
+  /* CSS-driven route transition. Runs without JavaScript, so content is
+     never hidden if hydration is slow or fails. */
+  .page-enter {
+    animation: page-enter 0.6s var(--ease-luxe) both;
+  }
+}
+
+@layer components {
+  /* Shared page gutter. Keeps every section on the same vertical rhythm. */
+  .shell {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 118.75rem;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .shell {
+      padding-inline: 4rem;
+    }
+  }
+
+  /* Small all-caps label used above section headings. */
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-luxe);
+    text-transform: uppercase;
+  }
+}
+
+@utility text-hero {
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+@utility text-section {
+  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+}
+
+@utility text-editorial {
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  line-height: 1.15;
+}
+
+@utility text-quote {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
