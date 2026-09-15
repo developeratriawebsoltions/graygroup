@@ -32,9 +32,9 @@ export function TeamSection({ showAll = false }: { showAll?: boolean }) {
           }
         />
 
-        <RevealGroup className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 md:mt-20 lg:grid-cols-4">
+        <RevealGroup className="mt-16 md:mt-20 flex flex-wrap justify-center gap-x-8 gap-y-14">
           {members.map((member) => (
-            <RevealItem key={member.slug}>
+            <RevealItem key={member.slug} className="w-full sm:w-72">
               <TeamCard member={member} />
             </RevealItem>
           ))}

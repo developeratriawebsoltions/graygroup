@@ -1,20 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const display = Cormorant_Garamond({
+const display = Playfair_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
   display: "swap",
 });
 
-const sans = Inter({
+const sans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
@@ -63,6 +63,16 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: { url: "/favicon/apple-touch-icon.png" },
+    other: [
+      { rel: "manifest", url: "/favicon/site.webmanifest" },
+    ],
   },
   category: "real estate",
 };

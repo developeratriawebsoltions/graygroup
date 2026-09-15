@@ -136,7 +136,7 @@ export function VirtualTour({
                       "text-[0.625rem] tabular-nums tracking-[0.18em]",
                       expanded || active
                         ? "text-sand"
-                        : "text-charcoal/35",
+                        : "text-charcoal/60",
                     )}
                   >
                     {String(i + 1).padStart(2, "0")}
@@ -144,7 +144,7 @@ export function VirtualTour({
                   <span
                     className={cn(
                       "font-display text-lg leading-tight",
-                      expanded || active ? "text-ivory" : "text-charcoal",
+                      expanded || active ? "text-ivory" : "text-charcoal/90",
                     )}
                   >
                     {item.label}
@@ -152,7 +152,7 @@ export function VirtualTour({
                   <span
                     className={cn(
                       "text-[0.75rem] leading-snug",
-                      expanded || active ? "text-ivory/55" : "text-charcoal/45",
+                      expanded || active ? "text-ivory/55" : "text-charcoal/65",
                     )}
                   >
                     {item.caption}

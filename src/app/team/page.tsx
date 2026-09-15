@@ -65,7 +65,7 @@ export default function TeamPage() {
                   <li>
                     <a
                       href={`tel:${member.phone.replace(/\./g, "")}`}
-                      className="inline-flex items-center gap-3 text-[0.8125rem] text-charcoal/60 transition-colors duration-400 hover:text-bronze"
+                      className="inline-flex items-center gap-3 text-[0.8125rem] font-semibold text-charcoal transition-colors duration-400 hover:text-bronze"
                     >
                       <Phone className="h-3.5 w-3.5" strokeWidth={1.5} />
                       {member.phone}
@@ -74,7 +74,7 @@ export default function TeamPage() {
                   <li>
                     <a
                       href={`mailto:${member.email}`}
-                      className="inline-flex items-center gap-3 text-[0.8125rem] text-charcoal/60 transition-colors duration-400 hover:text-bronze"
+                      className="inline-flex items-center gap-3 text-[0.8125rem] font-semibold text-charcoal transition-colors duration-400 hover:text-bronze"
                     >
                       <Mail className="h-3.5 w-3.5" strokeWidth={1.5} />
                       {member.email}
@@ -85,7 +85,7 @@ export default function TeamPage() {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 text-[0.8125rem] text-charcoal/60 transition-colors duration-400 hover:text-bronze"
+                      className="inline-flex items-center gap-3 text-[0.8125rem] font-semibold text-charcoal transition-colors duration-400 hover:text-bronze"
                     >
                       <LinkedinIcon className="h-3.5 w-3.5" />
                       LinkedIn
@@ -117,12 +117,12 @@ export default function TeamPage() {
 
               <RevealGroup className="mt-10 grid gap-x-8 gap-y-6 border-t border-line pt-8 sm:grid-cols-2">
                 <RevealItem>
-                  <h3 className="eyebrow text-charcoal/40">Credentials</h3>
+                  <h3 className="eyebrow text-charcoal">Credentials</h3>
                   <ul className="mt-5 space-y-2.5">
                     {member.credentials.map((credential) => (
                       <li
                         key={credential}
-                        className="text-[0.8125rem] leading-relaxed text-charcoal/60"
+                        className="text-[0.8125rem] font-semibold leading-relaxed text-charcoal"
                       >
                         {credential}
                       </li>
@@ -131,12 +131,12 @@ export default function TeamPage() {
                 </RevealItem>
 
                 <RevealItem>
-                  <h3 className="eyebrow text-charcoal/40">Languages</h3>
+                  <h3 className="eyebrow text-charcoal">Languages</h3>
                   <ul className="mt-5 space-y-2.5">
                     {member.languages.map((language) => (
                       <li
                         key={language}
-                        className="text-[0.8125rem] leading-relaxed text-charcoal/60"
+                        className="text-[0.8125rem] font-semibold leading-relaxed text-charcoal"
                       >
                         {language}
                       </li>

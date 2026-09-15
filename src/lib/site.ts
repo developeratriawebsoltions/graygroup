@@ -34,6 +34,8 @@ export const site = {
 export const navLinks = [
   { label: "Properties", href: "/properties" },
   { label: "Neighborhoods", href: "/neighborhoods" },
+  { label: "Sell", href: "/sell-your-home" },
+  { label: "Team", href: "/team" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },

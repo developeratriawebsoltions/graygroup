@@ -103,6 +103,16 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <Image
+              src="/mgroup.webp"
+              alt="M Group"
+              width={280}
+              height={80}
+              className={cn(
+                "h-10 w-auto transition-all duration-700",
+                solid ? "brightness-0" : "brightness-0 invert",
+              )}
+            />
             <Link
               href="/contact"
               className={cn(

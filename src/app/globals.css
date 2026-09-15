@@ -32,10 +32,10 @@
 }
 
 @theme inline {
-  --font-display: var(--font-cormorant), "Cormorant Garamond", "Playfair Display",
-    Georgia, "Times New Roman", serif;
+  --font-display: var(--font-cormorant), "Playfair Display", "Georgia",
+    "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, sans-serif;
+    "DM Sans", "Segoe UI", Roboto, sans-serif;
 }
 
 @layer base {
@@ -104,6 +104,51 @@
      never hidden if hydration is slow or fails. */
   .page-enter {
     animation: page-enter 0.6s var(--ease-luxe) both;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@layer components {
+  /* Radix accordion panel. Animating to the measured content height keeps the
+     FAQ opening at the same pace as the rest of the site's motion. */
+  .accordion-panel {
+    overflow: hidden;
+  }
+
+  .accordion-panel[data-state="open"] {
+    animation: accordion-down 0.45s var(--ease-luxe);
+  }
+
+  .accordion-panel[data-state="closed"] {
+    animation: accordion-up 0.45s var(--ease-luxe);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .accordion-panel[data-state="open"],
+    .accordion-panel[data-state="closed"] {
+      animation: none;
+    }
   }
 }
 

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 566" width="1024" height="1132">
+  <title>Arizona County Map</title>
+  <desc>Stylized vector map of Arizona with county boundaries and county names.</desc>
+
+  <rect width="512" height="566" fill="#ffffff"/>
+
+  <!-- Arizona county shapes -->
+  <g fill="#8f8f8f" stroke="#eeeeee" stroke-width="1.2" stroke-linejoin="round">
+    <!-- Mohave -->
+    <path d="M82 15 L84 73 L72 102 L69 157 L57 191 L58 246 L39 275 L37 333 L19 331 L20 397 L48 397 L51 360 L82 361 L83 302 L119 303 L119 238 L137 220 L137 170 L129 151 L136 112 L136 68 L146 49 L143 15 Z"/>
+
+    <!-- Coconino -->
+    <path d="M143 15 L472 15 L472 82 L399 82 L399 143 L340 143 L340 157 L275 157 L275 176 L238 176 L238 198 L195 198 L195 183 L166 183 L166 158 L136 158 L136 112 L136 68 Z"/>
+
+    <!-- Navajo -->
+    <path d="M340 143 L399 143 L399 83 L472 83 L472 155 L454 155 L454 230 L437 230 L437 298 L399 298 L399 334 L341 334 L341 277 L340 277 Z"/>
+
+    <!-- Apache -->
+    <path d="M399 83 L472 83 L472 15 L475 15 L479 330 L438 330 L438 298 L399 298 L399 230 L454 230 L454 155 L399 155 Z"/>
+
+    <!-- Yavapai -->
+    <path d="M119 238 L137 220 L137 170 L166 183 L195 183 L195 198 L238 198 L238 176 L275 176 L275 157 L340 157 L340 277 L319 277 L319 306 L289 306 L289 329 L248 329 L248 317 L194 317 L194 302 L119 302 Z"/>
+
+    <!-- La Paz -->
+    <path d="M20 331 L51 331 L51 360 L82 360 L82 397 L50 397 L48 430 L6 418 L8 365 Z"/>
+
+    <!-- Yuma -->
+    <path d="M6 418 L48 430 L49 455 L83 466 L83 503 L128 503 L128 566 L7 522 Z"/>
+
+    <!-- Maricopa -->
+    <path d="M83 302 L119 302 L194 302 L194 317 L248 317 L248 329 L289 329 L289 366 L271 366 L271 397 L224 397 L224 428 L166 428 L166 410 L128 410 L128 397 L83 397 L82 360 L51 360 L51 331 L83 331 Z"/>
+
+    <!-- Gila -->
+    <path d="M289 329 L319 306 L341 277 L341 334 L399 334 L399 367 L378 367 L378 400 L349 400 L349 430 L300 430 L271 397 L271 366 L289 366 Z"/>
+
+    <!-- Pinal -->
+    <path d="M128 397 L166 410 L166 428 L224 428 L224 397 L271 397 L300 430 L300 469 L276 469 L276 503 L224 503 L224 531 L128 531 Z"/>
+
+    <!-- Graham -->
+    <path d="M399 334 L438 330 L479 330 L480 463 L468 463 L452 445 L431 445 L431 425 L399 425 L378 400 L378 367 L399 367 Z"/>
+
+    <!-- Pima -->
+    <path d="M128 531 L224 531 L224 503 L276 503 L276 566 L128 566 Z"/>
+
+    <!-- Cochise -->
+    <path d="M399 425 L431 425 L431 445 L452 445 L468 463 L480 463 L481 566 L368 566 L368 503 L349 503 L349 469 L300 469 L300 430 L349 430 L378 400 Z"/>
+
+    <!-- Santa Cruz -->
+    <path d="M276 503 L349 503 L368 503 L368 566 L276 566 Z"/>
+
+    <!-- Greenlee -->
+    <path d="M480 330 L479 330 L479 463 L481 566 L505 566 L505 349 Z"/>
+  </g>
+
+  <!-- County labels -->
+  <g fill="#f7f7f7" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400"
+     text-anchor="middle" dominant-baseline="middle">
+    <text x="92" y="176">Mohave</text>
+    <text x="259" y="126">Coconino</text>
+    <text x="372" y="204" transform="rotate(-90 372 204)">Navajo</text>
+    <text x="462" y="107" transform="rotate(-90 462 107)">Apache</text>
+    <text x="184" y="253">Yavapai</text>
+    <text x="73" y="329">LaPaz</text>
+    <text x="77" y="431">Yuma</text>
+    <text x="188" y="355">Maricopa</text>
+    <text x="345" y="356">Gila</text>
+    <text x="302" y="424">Pinal</text>
+    <text x="424" y="414">Graham</text>
+    <text x="258" y="510">Pima</text>
+    <text x="444" y="540">Cochise</text>
+    <text x="323" y="555" font-size="12">Santa Cruz</text>
+    <text x="493" y="414" transform="rotate(-90 493 414)" font-size="13">Greenlee</text>
+  </g>
+
+  <!-- subtle outer edge -->
+  <path d="M84 15 L472 15 L479 330 L481 566 L368 566 L276 566 L128 566 L7 522 L6 418 L19 397 L20 331 L39 275 L57 246 L58 191 L69 157 L72 102 Z"
+        fill="none" stroke="#f2f2f2" stroke-width="1.5"/>
+</svg>
